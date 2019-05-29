@@ -1,0 +1,11 @@
+#ex1{
+    width: 600px; 
+    height:200px;
+}
+#ex2{
+    width: 500px; 
+}
+input{
+    word-break: break-word;
+  }
+

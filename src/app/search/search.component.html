@@ -1,0 +1,25 @@
+<div class = "container">
+  <h4>Look for your document here:</h4>
+
+  <input  class="form-control input-sm" type="text" placeholder="Search with the document title" ><br></div>
+
+
+<div class = "container">
+  <table class = "table table-condensed ">
+    <tr *ngFor= 'let d of documents'>
+      <input type = "checkbox" >&#160;
+      <!-- <td>{{d.id}}</td> -->
+      <a [routerLink]='["/display", d.id]'> <td>{{d.title}}</td></a>
+      
+      <!-- <td>{{d.text}}</td> -->
+  
+    </tr>
+  </table>
+  <br><br>
+  <button class="btn btn-danger" routerLink="/home">Add a new story</button> &#160;
+  <button class= "btn btn-danger" routerLink="/home">Go back</button>
+
+</div>
+
+ 
+<router-outlet></router-outlet>

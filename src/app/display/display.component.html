@@ -1,0 +1,33 @@
+<div id="div1" class="container">
+    <h4>Document Id: {{document.id}}</h4>
+    <h2>{{document.title}}</h2><br>
+</div>
+<div id="div2" class="container" [(ngModel)]="updatedText">
+    <p>{{document.text}}</p><br>
+</div>
+<br>
+<!-- <div  class = "container"><button class = "btn btn-success" (click)= "updateDocument(document.id)">Update</button></div> -->
+
+
+<div class="container"><button class="btn btn-success" [routerLink]="[ {outlets: {popup: ['edit']}}]">Edit
+        Story</button></div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div>
+            <router-outlet #o="outlet"></router-outlet>
+        </div><br>
+        <div>
+            <router-outlet name="popup"></router-outlet>
+        </div>
+    </div>
+</div>
+
+<div class="container"><button class="btn btn-default" (click)=updateDocument(document.id)>Update</button></div>
+
+<br>
+<div class="container"><button class="btn btn-danger" routerLink="/search"> Go back</button>&#160;
+    <button class="btn btn-danger" routerLink="/home"> Add my story</button>
+</div>
